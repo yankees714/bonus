@@ -1979,6 +1979,10 @@ figure.authorpic {
 	-webkit-box-sizing: border-box;
 }
 
+figure.authorpic img {
+	max-width:180px;
+}
+
 .authorstats {
 	float: left;
 	max-width: 500px;
