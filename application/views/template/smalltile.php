@@ -13,7 +13,19 @@ excerpt: show the excerpt? -->
 <ul class="articleblock">
 	<?foreach($blocks as $block):?>
 	<li class="smalltile <?if(!empty($fullwidth)):?>fullwidth <?endif;?><?if(!empty($autoheight)):?>autoheight <?endif;?>">
-		<?if(!empty($articles)):?>
+		<?if(!empty($serie)):?>
+			<a href="<?=base_url()?>series/<?=$block->series?>">
+				<h3><?=$block->name?></h3>
+			</a>
+		<?elseif(!empty($contrib)):?>
+			<a href="<?=base_url()?>author/<?=$block->author_id?>" title="<?=$block->contrib_count?> contribution<?= ($block->contrib_count > 1 ? 's' : '') ?>">
+				<h3><?=$block->name?></h3>
+			</a>
+		<?elseif(!empty($collab)):?>
+			<a href="<?=base_url()?>author/<?=$block->author_id?>" title="<?=$block->collab_count?> collaboration<?= ($block->collab_count > 1 ? 's, including' : ':') ?> '<?=$block->title?>' ">
+				<h3><?=$block->name?></h3>
+			</a>
+		<?elseif(!empty($articles)):?>
 			<a href="<?=base_url()?>article/<?=$block->id?>">
 				<?if(isset($dateified)): //only articles are ever dateified?>
 					<div class="dateified"><?=dateify($block->date, $date)?></div>
@@ -29,18 +41,6 @@ excerpt: show the excerpt? -->
 				<?if(isset($block->excerpt) && !empty($excerpt)):?>
 					<div class="excerpt"><?=$block->excerpt?></div>
 				<?endif;?>
-			</a>
-		<?elseif(!empty($serie)):?>
-			<a href="<?=base_url()?>series/<?=$block->series?>">
-				<h3><?=$block->name?></h3>
-			</a>
-		<?elseif(!empty($contrib)):?>
-			<a href="<?=base_url()?>author/<?=$block->author_id?>" title="<?=$block->contrib_count?> contribution<?= ($block->contrib_count > 1 ? 's' : '') ?>">
-				<h3><?=$block->name?></h3>
-			</a>
-		<?elseif(!empty($collab)):?>
-			<a href="<?=base_url()?>author/<?=$block->author_id?>" title="<?=$block->collab_count?> collaboration<?= ($block->collab_count > 1 ? 's, including' : ':') ?> '<?=$block->title?>' ">
-				<h3><?=$block->name?></h3>
 			</a>
 		<?endif;?>
 	</li>
