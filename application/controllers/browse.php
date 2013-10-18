@@ -9,6 +9,7 @@ class Browse extends CI_Controller {
 		$this->load->model('article_model', '', TRUE);
 		$this->load->model('attachments_model', '', TRUE);
 		$this->load->model('tools_model', '', TRUE);
+		$this->load->model('ad_model', '', TRUE);
 	}
 	
 	public function index()
@@ -120,6 +121,9 @@ class Browse extends CI_Controller {
 			$data->page_title = '';
 			$data->page_description = '';
 			$data->page_type = '';
+
+			$data->ad = $this->ad_model->get_ad();
+
 			
 			$this->load->view('browse', $data);
 		}
