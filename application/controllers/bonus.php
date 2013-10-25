@@ -9,6 +9,7 @@ class Bonus extends CI_Controller {
 		$this->load->model('attachments_model', '', TRUE);
 		$this->load->model('author_model', '', TRUE);
 		$this->load->model('tools_model', '', TRUE);
+		$this->load->model('ad_model', '', TRUE);
 		$this->load->library('user_agent');
 	}
 	
@@ -56,6 +57,8 @@ class Bonus extends CI_Controller {
 	{
 		if($this->session->userdata('logged_in'))
 		{
+			$data = new stdClass;
+
 			$data->quote = $this->attachments_model->get_random_quote(false);
 			$data->tips = $this->tools_model->get_tips();
 			$this->load->view('bonus/dashboard', $data);
@@ -95,6 +98,57 @@ class Bonus extends CI_Controller {
 		}
 	}
 	
+
+	function ads() {
+		if($this->session->userdata('logged_in'))
+		{
+			
+			if (!empty($_POST))
+			{
+				$insertdata = array(
+					'volume' 		=> $this->input->post("volume"),
+					'issue_number' 		=> $this->input->post("number"),
+					'issue_date' 		=> $this->input->post("publish_date"),
+					'scribd'		=> $this->input->post("id"),
+					'ready'			=> "1",
+				);
+
+				$issue_exists = $this->tools_model->get_issue($insertdata['volume'], $insertdata['issue_number']);
+
+				if (!$issue_exists){
+					$this->tools_model->add_issue($insertdata);
+				} else {
+					$this->tools_model->add_scribd($insertdata['volume'], $insertdata['issue_number'], $insertdata['scribd']);
+				}
+			}
+
+			$this->load->helper(array('form'));
+
+			$data = new stdClass;
+
+			$data->quote = $this->attachments_model->get_random_quote(false);
+			$data->ads = $this->ad_model->get_ads();
+
+			$this->load->view('bonus/ads', $data);
+		}
+		else
+		{
+			//If no session, redirect to login page
+			redirect('bonus/login', 'refresh');
+		}
+	}
+
+	function ajax_delete_ad($ad_id){
+		if(!bonus()) exit("Permission denied. Try refreshing and logging in again.");
+		if($this->input->post('remove')=='true') {
+			
+			$this->ad_model->delete_ad($ad_id);
+			exit("Ad deleted.");
+		}
+		else {
+			exit("Delete request wasn't sent properly.");
+		}
+	}
 
 	function issues()
 	{
