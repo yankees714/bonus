@@ -8,6 +8,12 @@ class Ad_model extends CI_Model {
     }
     
     function get_ads(){
+        $ads = $this->db->get('ads')->result();
+
+        return $ads;
+    }
+
+    function get_current_ads(){
         $today = date("Y-m-d");
 
         $this->db->where('DATE_FORMAT(ads.start_date,"%Y-%m-%d") <', $today);
@@ -19,11 +25,22 @@ class Ad_model extends CI_Model {
     }
 
     function get_ad(){
-        $ads = $this->get_ads();
+        $ads = $this->get_current_ads();
 
-        $ad = $ads[array_rand($ads)];
+        if($ads != null) {
+            $ad = $ads[array_rand($ads)];
+            return $ad;
+        } else {
+            return null;
+        }
+    }
 
-        return $ad;
+    function delete_ad($ad_id){
+        $this->db->where('id', $ad_id);
+
+        // CI's delete syntax makes me anxious - it looks like I'm telling it to delete
+        // a whole table and I'm worried that one day it will actually just do that
+        $this->db->delete('ads');
     }
 }
 ?>

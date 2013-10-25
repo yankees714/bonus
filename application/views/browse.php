@@ -73,12 +73,18 @@
 		<!-- ADS -->
 		<? if($ad): ?>
 			<h2>Sponsored</h2>
+			<? if(isset($ad->link)):?>
+				<a href="<?=$ad->link?>">
+			<? endif; ?>
 			<? if ($ad->type == "html"): ?>
 				<div class="ad">
 					<?= file_get_contents(base_url()."ads/".$ad->filename); ?>
 				</div>
 			<? elseif ($ad->type == "image"): ?>
 				<img class="ad" src="<?=base_url()."ads/".$ad->filename?>"/>
+			<? endif; ?>
+			<? if(isset($ad->link)):?>
+				</a>
 			<? endif; ?>
 		<? endif; ?>
 		<!-- end ads -->
