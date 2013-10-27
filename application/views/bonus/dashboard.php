@@ -35,7 +35,7 @@
 		
 	<h3>Tips</h3>
 	
-	<table>
+	<table class="tiptable">
 		<tr>
 			<th>Tip</th>
 			<th>From</th>
@@ -46,11 +46,11 @@
 					<td><strong><?= $tip->prompt ?>: </strong><?= $tip->tip ?></td>
 					<td><small>
 						<?= date("F j, Y h:i:s a",strtotime($tip->submitted)) ?>
-						<? if(!empty($tip->user_location)): ?><br/><strong>From:</strong> <?= anchor($tip->user_location,$tip->user_location) ?><? endif; ?>
-						<? if(!empty($tip->user_referer)): ?><br/><strong>Via:</strong> <?= anchor($tip->user_referer,$tip->user_referer) ?><? endif; ?>
-						<? if(!empty($tip->user_ip)): ?><br/><strong>IP address:</strong> <?= $tip->user_ip ?><? endif; ?>
-						<? if(!empty($tip->user_host)): ?><br/><strong>IP host:</strong> <?= $tip->user_host ?><? endif; ?>
-						<? if(!empty($tip->user_agent)): ?><br/><strong>System info:</strong> <?= $tip->user_agent ?><? endif; ?>
+						<? if(!empty($tip->user_location)): ?><p><strong>From:</strong> <?= anchor($tip->user_location,$tip->user_location) ?></p><? endif; ?>
+						<? if(!empty($tip->user_referer)): ?><p><strong>Via:</strong> <?= anchor($tip->user_referer,$tip->user_referer) ?></p><? endif; ?>
+						<? if(!empty($tip->user_ip)): ?><p><strong>IP address:</strong> <?= $tip->user_ip ?></p><? endif; ?>
+						<? if(!empty($tip->user_host)): ?><p><strong>IP host:</strong> <?= $tip->user_host ?></p><? endif; ?>
+						<? if(!empty($tip->user_agent)): ?><p><strong>System info:</strong> <?= $tip->user_agent ?></p><? endif; ?>
 					</small></td>
 				</tr>
 			<? endforeach; ?>
