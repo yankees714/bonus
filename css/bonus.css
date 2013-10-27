@@ -11,6 +11,21 @@ body {
 	margin: 0 auto;
 }
 
+.tiptable {
+	width:100%;
+	table-layout:fixed
+}
+
+.tiptable td {
+	width:50%;
+}
+
+.tiptable p {
+	font-size:8pt;
+	word-wrap:break-word;
+	margin:0;
+}
+
 header {
 	padding: 20px;
 }
