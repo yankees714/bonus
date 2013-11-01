@@ -514,6 +514,17 @@ figure:hover .bonus-attachment, #dnd-holder.hover .bonus-attachment {
 	opacity: 1;
 }
 
+p.hide-photo { 
+	color:grey;
+	display:inline-block;
+	float:right;
+}
+
+input.hide-photo {
+	margin-left:10px;
+	margin-right:0;
+}
+
 /* 
 // TEMPLATE ELEMENTS 
 */

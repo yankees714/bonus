@@ -95,7 +95,7 @@ class Attachments_model extends CI_Model {
     	}
     }
     
-    function add_photo($filename_small, $filename_large, $filename_original, $credit, $caption, $article_id, $priority='1')
+    function add_photo($filename_small, $filename_large, $filename_original, $credit, $caption, $article_id, $priority='1', $hidephoto=FALSE)
     {
 		$this->load->model('author_model', '', TRUE);
 		
@@ -122,7 +122,8 @@ class Attachments_model extends CI_Model {
 		   'photographer_id' 	=> $photographer_id,
 		   'caption' 			=> $caption,
 		   'article_id' 		=> $article_id,
-		   'priority' 			=> $priority
+		   'priority' 			=> $priority,
+           'thumbnail_only'     => $hidephoto
 		);
 		return $this->db->insert('photo', $data);
     }
