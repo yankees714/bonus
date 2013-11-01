@@ -231,6 +231,7 @@
 							<figcaption class="bonus">
 								<p id="photocreditbonus" class="photocredit" contenteditable="true" title="Photographer"></p>
 								<p id="photocaptionbonus" class="photocaption" contenteditable="true" title="Caption"></p>
+								<p class="hide-photo">Use photo as homepage thumbnail only:  <input class="hide-photo" type="checkbox"></p>
 							</figcaption>
 						</figure>
 		  
@@ -462,7 +463,8 @@
 						data: 
 							"img=" + $('#dnd-holder').css('background-image') + 
 					        "&credit=" + urlencode($("#photocreditbonus").html()) +
-	                        "&caption=" + urlencode($("#photocaptionbonus").html()),
+	                        "&caption=" + urlencode($("#photocaptionbonus").html()) +
+	                        "&hidephoto=" + urlencode($("input.hide-photo").is(':checked')),
 					    success: function(result){
 						    if(result=="Photo added.") {
 						    	refresh = true;
