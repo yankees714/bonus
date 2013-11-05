@@ -12,20 +12,21 @@ class Attachments_model extends CI_Model {
     // PHOTOS //
     ////////////
     
-    function get_photos($article_id)
+    function get_photos($article_id, $large_photos_only=0)
     {
     	$this->db->select("
     		photo.id as photo_id, 
     		photo.filename_small, 
     		photo.filename_large, 
     		photo.credit, 
-    		photo.caption, 
+    		photo.caption,
     		author.id as photographer_id, 
     		author.name as photographer_name");
     	$this->db->join("author", "author.id = photo.photographer_id", 'left');
     	$this->db->from("photo");
     	$this->db->where("article_id", $article_id);
     	$this->db->where("photo.active", "1");
+        $this->db->where("photo.thumbnail_only", ($large_photos_only+1)%2);
     	$this->db->order_by("priority", "asc");
     	$query = $this->db->get();
     	if($query->num_rows() > 0)
