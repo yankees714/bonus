@@ -95,9 +95,9 @@ class Attachments_model extends CI_Model {
     	}
     }
     
-    function add_photo($filename_small, $filename_large, $filename_original, $credit, $caption, $article_id, $priority='1', $hidephoto=FALSE)
+    function add_photo($filename_small, $filename_large, $filename_original, $credit, $caption, $article_id, $priority='1', $hidephoto)
     {
-		$this->load->model('author_model', '', TRUE);
+        $this->load->model('author_model', '', TRUE);
 		
 		$photographer_id = null;
 		// if it appears a photographer has been entered
