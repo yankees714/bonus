@@ -12,6 +12,9 @@
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <script type="text/javascript" src="<?=base_url()?>js/datepicker/picker.js"></script>
     <script type="text/javascript" src="<?=base_url()?>js/datepicker/picker.date.js"></script>
+
+    <link rel="stylesheet" href="<?=base_url()?>js/datepicker/themes/classic.css">
+    <link rel="stylesheet" href="<?=base_url()?>js/datepicker/themes/classic.date.css">
 </head>
 
 <body>
@@ -52,12 +55,17 @@
     ?>
     <table class="adupload">
     <tr><td>Sponsor: </td><td> <input required type="text" name="sponsor" placeholder="e.g., 'Flipside'"> </td></tr>
-    <tr><td>Start date: </td><td> <input class="datepick" required type="datetime" name="publish_date" value="" placeholder="format: YYYY-MM-DD"> </td></tr>
-    <tr><td>End date: </td><td> <input class="datepick" required type="datetime" name="publish_date" value="" placeholder="format: YYYY-MM-DD"> </td></tr>
+    <tr><td>Start date: </td><td> <input class="datepick" required type="datetime" name="publish_date" value="" placeholder="Click to select a date"> </td></tr>
+    <tr><td>End date: </td><td> <input class="datepick" required type="datetime" name="publish_date" value="" placeholder="Click to select a date"> </td></tr>
     <tr><td>Link when clicked (optional): </td><td> <input type="text" name="number" placeholder="e.g., 'http://flipsidemaine.com'"> </td></tr>
     <tr><td>Photo upload:</td><td><input required type="file" name="file" id="file"></td></tr>
     </table>
-    <script type="text/javascript">$(".adupload input.datepick").pickadate();</script>
+    <script type="text/javascript">
+        $(".adupload input.datepick").pickadate({
+            theme: 'classic',
+            format: 'yyyy-mm-dd',
+        });
+    </script>
     <?= form_submit('submit',"Create advertisement") ?>
     <?= form_close() ?>
 
