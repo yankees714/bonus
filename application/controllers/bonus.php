@@ -141,8 +141,7 @@ class Bonus extends CI_Controller {
 	function ajax_delete_ad($ad_id){
 		if(!bonus()) exit("Permission denied. Try refreshing and logging in again.");
 		if($this->input->post('remove')=='true') {
-			
-			$this->ad_model->delete_ad($ad_id);
+			//$this->ad_model->delete_ad($ad_id);
 			exit("Ad deleted.");
 		}
 		else {
