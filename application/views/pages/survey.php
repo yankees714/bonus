@@ -16,7 +16,7 @@
 		
 		<div id="articlebody" class="articlebody">
 			
-			<iframe src="https://docs.google.com/forms/d/16d4vIBYEQVhBer9bRuzd_yMaCa8fxJsoL5vCsS5cwyk/viewform?embedded=true" width="760" height="4000" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+			<!-- <iframe src="https://docs.google.com/forms/d/16d4vIBYEQVhBer9bRuzd_yMaCa8fxJsoL5vCsS5cwyk/viewform?embedded=true" width="760" height="4000" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe> -->
 					
 		</div>
 	  
