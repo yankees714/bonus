@@ -7,9 +7,11 @@
     <link rel="shortcut icon" href="<?=base_url()?>img/o-32-invert.png">
     <link rel="stylesheet" media="screen" href="<?=base_url()?>/css/bonus.css?v=1">
     
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
     <script type="text/javascript" src="http://use.typekit.com/rmt0nbm.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <script type="text/javascript" src="<?=base_url()?>js/datepicker/picker.js"></script>
+    <script type="text/javascript" src="<?=base_url()?>js/datepicker/picker.date.js"></script>
 </head>
 
 <body>
@@ -48,10 +50,14 @@
             );
         echo form_open('bonus/issues',$attributes,$hidden);
     ?>
-    Sponsor: <input type="text" name="sponsor"><br/>
-    Start date: <input type="datetime" name="publish_date" value="<?=date("Y-m-d",time())?>"><br/>
-    End date: <input type="datetime" name="publish_date" value=""><br/>
-    Link when clicked (optional): <input type="text" name="number"><br/>
+    <table class="adupload">
+    <tr><td>Sponsor: </td><td> <input required type="text" name="sponsor" placeholder="e.g., 'Flipside'"> </td></tr>
+    <tr><td>Start date: </td><td> <input class="datepick" required type="datetime" name="publish_date" value="" placeholder="format: YYYY-MM-DD"> </td></tr>
+    <tr><td>End date: </td><td> <input class="datepick" required type="datetime" name="publish_date" value="" placeholder="format: YYYY-MM-DD"> </td></tr>
+    <tr><td>Link when clicked (optional): </td><td> <input type="text" name="number" placeholder="e.g., 'http://flipsidemaine.com'"> </td></tr>
+    <tr><td>Photo upload:</td><td><input required type="file" name="file" id="file"></td></tr>
+    </table>
+    <script type="text/javascript">$(".adupload input.datepick").pickadate();</script>
     <?= form_submit('submit',"Create advertisement") ?>
     <?= form_close() ?>
 
@@ -72,7 +78,7 @@
     <? foreach($ads as $ad): ?>
     <tr>
         <td><?=$ad->sponsor?></td>
-        <td><?=$ad->link?></td>
+        <td><?=!empty($ad->link) ? $ad->link : "None specified"; ?></td>
         <td><?=$ad->start_date?></td>
         <td><?=$ad->end_date?></td>
         <td><?=$ad->filename?></td>
