@@ -26,6 +26,10 @@ body {
 	margin:0;
 }
 
+.adupload input {
+	width:200px;
+}
+
 header {
 	padding: 20px;
 }

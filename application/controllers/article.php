@@ -51,6 +51,10 @@ class Article extends CI_Controller {
 			$drop_thumbnail_only_photos = 1;
 			$photos = $this->attachments_model->get_photos($id, $drop_thumbnail_only_photos);
 			
+			$data = new stdClass();
+			$data->footerdata = new stdClass();
+			$data->headerdata = new stdClass();
+
 			// get random quote
 			$data->footerdata->quote = $this->attachments_model->get_random_quote();
 			
