@@ -58,13 +58,10 @@
     <tr><td>Start date: </td><td> <input class="datepick" required type="datetime" name="publish_date" value="" placeholder="Click to select a date"> </td></tr>
     <tr><td>End date: </td><td> <input class="datepick" required type="datetime" name="publish_date" value="" placeholder="Click to select a date"> </td></tr>
     <tr><td>Link when clicked (optional): </td><td> <input type="text" name="number" placeholder="e.g., 'http://flipsidemaine.com'"> </td></tr>
-    <tr><td>Photo upload:</td><td><input required type="file" name="file" id="file"></td></tr>
+    <tr><td>Photo upload:</td><td><input required type="file" name="file" id="file" accept="image/gif, image/png, image/jpeg"></td></tr>
     </table>
     <script type="text/javascript">
-        $(".adupload input.datepick").pickadate({
-            theme: 'classic',
-            format: 'yyyy-mm-dd',
-        });
+        $(".adupload input.datepick").pickadate({format: 'yyyy-mm-dd'});
     </script>
     <?= form_submit('submit',"Create advertisement") ?>
     <?= form_close() ?>
@@ -120,8 +117,7 @@
 <script type="text/javascript">
     $(".delete-link").click(function(){
         id = $(this).attr("id");
-
-        $.post("<?=base_url()?>bonus/ads/ajax_delete_ad"+id, {"remove": true}).done(function(){
+        $.post("<?=base_url()?>bonus/ajax_delete_ad/"+id, {"remove": true}).done(function(){
             location.reload(true);
         });
     });
