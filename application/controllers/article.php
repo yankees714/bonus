@@ -48,8 +48,8 @@ class Article extends CI_Controller {
 			$authors = $this->article_model->get_article_authors($id);
 			$attachments = $this->attachments_model->get_attachments($id);
 
-			$large_photos_only = 1;
-			$photos = $this->attachments_model->get_photos($id, $large_photos_only);
+			$drop_thumbnail_only_photos = 1;
+			$photos = $this->attachments_model->get_photos($id, $drop_thumbnail_only_photos);
 			
 			// get random quote
 			$data->footerdata->quote = $this->attachments_model->get_random_quote();
@@ -303,11 +303,7 @@ class Article extends CI_Controller {
 		$img = substr($this->input->post("img"), $offset, strlen($this->input->post("img"))-($strlen_offset));
 		$credit = substr(trim(strip_tags(urldecode($this->input->post("credit")), '<b><i><u><strong><em>')),0,100); //limited to 100 due to db
 		$caption = trim(strip_tags(urldecode($this->input->post("caption")), '<b><i><u><strong><em><a>'));
-		
-		$hidephoto = 0;
-
-		if($this->input->post("hidephoto"))
-			$hidephoto = 1;
+		$hidephoto = urldecode($this->input->post("hidephoto"));
 
 		// bug: "When Base64 gets POSTed, all pluses are interpreted as spaces."
 		// this corrects for it.

@@ -12,7 +12,7 @@ class Attachments_model extends CI_Model {
     // PHOTOS //
     ////////////
     
-    function get_photos($article_id, $large_photos_only=0)
+    function get_photos($article_id, $thumbnails_only = 0)
     {
     	$this->db->select("
     		photo.id as photo_id, 
@@ -26,7 +26,8 @@ class Attachments_model extends CI_Model {
     	$this->db->from("photo");
     	$this->db->where("article_id", $article_id);
     	$this->db->where("photo.active", "1");
-        $this->db->where("photo.thumbnail_only", ($large_photos_only+1)%2);
+        if($thumbnails_only == 1)
+            $this->db->where("photo.thumbnail_only", 0);
     	$this->db->order_by("priority", "asc");
     	$query = $this->db->get();
     	if($query->num_rows() > 0)
@@ -99,7 +100,9 @@ class Attachments_model extends CI_Model {
     function add_photo($filename_small, $filename_large, $filename_original, $credit, $caption, $article_id, $priority='1', $hidephoto)
     {
         $this->load->model('author_model', '', TRUE);
-		
+
+        $hidephoto=="true" ? $thumbonly = 1 : $thumbonly = 0;
+
 		$photographer_id = null;
 		// if it appears a photographer has been entered
 		if(strlen($credit) > 1) {
@@ -124,7 +127,7 @@ class Attachments_model extends CI_Model {
 		   'caption' 			=> $caption,
 		   'article_id' 		=> $article_id,
 		   'priority' 			=> $priority,
-           'thumbnail_only'     => $hidephoto
+           'thumbnail_only'     => $thumbonly
 		);
 		return $this->db->insert('photo', $data);
     }
