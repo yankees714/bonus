@@ -18,3 +18,6 @@ The only supported development environment is OSX >=10.8. To get started:
 * Aquire an SQL dump (either by `mysqldump`ing medved or by pulling the compressed backup from S3) and populate your local database. Brian can help you with this.
 * Email [@bjacobel](mailto:bjacobel@gmail.com) so he can talk you over development procedures
 * Start writing code 
+
+## License
+BONUS, at some point in its lifetime, will be released as an open source project. When it is, it will be licensed under the terms of the [GNU Public License, v3](https://github.com/BowdoinOrient/bonus/blob/master/LICENSE.md).
