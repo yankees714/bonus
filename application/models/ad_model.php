@@ -42,5 +42,13 @@ class Ad_model extends CI_Model {
         // a whole table and I'm worried that one day it will actually just do that
         $this->db->delete('ads');
     }
+
+    function create_ad($data){
+        $this->db->insert('ads', $data);
+    }
+
+    function count_ads(){
+        return $this->db->count_all_results('ads');
+    }
 }
 ?>

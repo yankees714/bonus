@@ -43,28 +43,29 @@
 
     <? 
         $attributes = array(
-            'name' => 'create_issue',
+            'name' => 'create_ad',
             'class' => 'create_issue', 
             'id' => 'create_issue',
-            'onsubmit'  => "return validateIssueForm()"
+            'onsubmit'  => "return validateAdForm()"
             );
         $hidden = array(
-            'form_name' => 'create_issue',
+            'form_name' => 'create_ad',
             );
-        echo form_open('bonus/issues',$attributes,$hidden);
+        echo form_open_multipart('bonus/ads',$attributes,$hidden);
     ?>
     <table class="adupload">
     <tr><td>Sponsor: </td><td> <input required type="text" name="sponsor" placeholder="e.g., 'Flipside'"> </td></tr>
-    <tr><td>Start date: </td><td> <input class="datepick" required type="datetime" name="publish_date" value="" placeholder="Click to select a date"> </td></tr>
-    <tr><td>End date: </td><td> <input class="datepick" required type="datetime" name="publish_date" value="" placeholder="Click to select a date"> </td></tr>
-    <tr><td>Link when clicked (optional): </td><td> <input type="text" name="number" placeholder="e.g., 'http://flipsidemaine.com'"> </td></tr>
-    <tr><td>Photo upload:</td><td><input required type="file" name="file" id="file" accept="image/gif, image/png, image/jpeg"></td></tr>
+    <tr><td>Start date: </td><td> <input class="datepick" required type="datetime" name="start_date" value="" placeholder="Click to select a date"> </td></tr>
+    <tr><td>End date: </td><td> <input class="datepick" required type="datetime" name="end_date" value="" placeholder="Click to select a date"> </td></tr>
+    <tr><td>Link when clicked (optional): </td><td> <input type="text" name="link" placeholder="e.g., 'http://flipsidemaine.com'"> </td></tr>
+    <tr><td>Photo upload:</td><td><input required type="file" name="filename" id="filename" accept="image/png, image/jpeg"></td></tr>
     </table>
+    <?= form_submit('submit',"Create advertisement") ?>
+    <?= form_close() ?>
+
     <script type="text/javascript">
         $(".adupload input.datepick").pickadate({format: 'yyyy-mm-dd'});
     </script>
-    <?= form_submit('submit',"Create advertisement") ?>
-    <?= form_close() ?>
 
     <h3>Existing Ads</h3>
     
