@@ -40,6 +40,7 @@ class Bonus extends CI_Controller {
 			redirect('browse', 'refresh');
 		}
 		$this->load->helper(array('form'));
+		$data = new stdClass();
 		$data->quote = $this->attachments_model->get_random_quote();
 		
 		if($this->agent->is_referral()) 
@@ -102,23 +103,33 @@ class Bonus extends CI_Controller {
 	function ads() {
 		if($this->session->userdata('logged_in'))
 		{
-			
 			if (!empty($_POST))
 			{
 				$insertdata = array(
-					'volume' 		=> $this->input->post("volume"),
-					'issue_number' 		=> $this->input->post("number"),
-					'issue_date' 		=> $this->input->post("publish_date"),
-					'scribd'		=> $this->input->post("id"),
-					'ready'			=> "1",
+					'sponsor' 		=> $this->input->post("sponsor"),
+					'start_date' 	=> $this->input->post("start_date"),
+					'end_date' 		=> $this->input->post("end_date"),
+					'link'			=> $this->input->post("link"),
 				);
 
-				$issue_exists = $this->tools_model->get_issue($insertdata['volume'], $insertdata['issue_number']);
+				$fexpl = explode(".", $this->input->post('filename'));
+				die(var_dump($_POST));
+				$extension = $fexpl[count($fexpl)-1];
 
-				if (!$issue_exists){
-					$this->tools_model->add_issue($insertdata);
+				$config['upload_path'] 		= 'ads/';
+				$config['allowed_types'] 	= 'jpeg|jpg|png';
+				$config['max_size']			= '1000';
+				$config['max_width']  		= '1280';
+				$config['max_height']  		= '1280';
+				$config['file_name'] 		= "ad".($this->ad_model->count_ads()+1).$extension;
+
+				$this->load->library('upload', $config);
+
+				if (!$this->upload->do_upload('file')){
+					exit(var_dump($this->upload->display_errors()));
 				} else {
-					$this->tools_model->add_scribd($insertdata['volume'], $insertdata['issue_number'], $insertdata['scribd']);
+					$insertdata['filename'] = "ad".($this->ad_model->count_ads()+1).$extension;
+					$this->ad_model->create_ad($insertdata);
 				}
 			}
 
@@ -141,7 +152,7 @@ class Bonus extends CI_Controller {
 	function ajax_delete_ad($ad_id){
 		if(!bonus()) exit("Permission denied. Try refreshing and logging in again.");
 		if($this->input->post('remove')=='true') {
-			//$this->ad_model->delete_ad($ad_id);
+			$this->ad_model->delete_ad($ad_id);
 			exit("Ad deleted.");
 		}
 		else {
@@ -174,7 +185,7 @@ class Bonus extends CI_Controller {
 			}
 
 			$this->load->helper(array('form'));
-
+			$data = new stdClass();
 			$data->quote = $this->attachments_model->get_random_quote(false);
 			$data->issues = $this->tools_model->get_issues();
 
