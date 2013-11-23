@@ -1578,7 +1578,7 @@ article header, .authorheader {
 /* TOOLBOX */
 
 .toolbox {
-	margin-top: -110px;
+	margin-top:-70px;
 	padding: 10px;
 	border: 1px solid lightgray;
 	width: 190px;
@@ -1732,6 +1732,10 @@ figcaption p {
 .photocaption {
 	font-size: 14px;
 	margin: 0;
+}
+
+.articlemedia{
+	padding-top:25px;
 }
 
 .articlemedia .delete {
