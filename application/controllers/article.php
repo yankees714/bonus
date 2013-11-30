@@ -240,7 +240,6 @@ class Article extends CI_Controller {
 	{
 		if(!bonus()) exit("Permission denied. Try refreshing and logging in again.");
 
-		// this general-purpose function is potentially wildly insecure.
 		if(!($table == 'author' || $table == 'job' || $table == 'series')) exit("Disallowed.");
 		
 		$term = $this->input->get('term', true);

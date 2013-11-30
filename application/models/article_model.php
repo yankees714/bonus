@@ -260,8 +260,12 @@ class Article_model extends CI_Model {
 	function get_suggestions($table, $field, $term)
 	{
 		// boot if trying to access anything other than allowed tables
-		// (this could be a major security risk if we're sloppy)
 		if($table != ('author' || 'job' || 'series')) return false; 
+
+		// boot if trying to access anything other than the 'name' field
+		// because we don't currently get suggestions for anything other than a author/job/series name
+		// and opening it up to ALL fields in those tables is a data leak potential
+		if($field != 'name') return false;
 		
 		$this->db->select($field." as value");
 		$this->db->where('active', '1'); //table had better have an `active` field!
