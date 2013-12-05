@@ -26,7 +26,7 @@ function compress()
           )             # End alternation group.
         )  # If we made it here, we are not in a blacklist tag.
         %Six';
-    $text = preg_replace($re, " ", $buffer);
+    $buffer = preg_replace($re, " ", $buffer);
 
     $CI->output->set_output($buffer);
     $CI->output->_display();

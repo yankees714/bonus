@@ -72,7 +72,13 @@ class Pages extends CI_Controller {
 	{
 		if($this->input->get())
 		{
-			$data->searchdata = $this->input->get();
+			$searchdata = $this->input->get();
+
+			foreach ($searchdata as &$d) {
+				$d = htmlspecialchars(htmlspecialchars($d));
+			}
+
+			$data->searchdata = $searchdata;
 			$data->articles = $this->article_model->advsearch($this->input->get());
 		}
 		
