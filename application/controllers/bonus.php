@@ -225,6 +225,17 @@ class Bonus extends CI_Controller {
 		
 		// note: not running xss_clean because it was corrupting the input for certain usernames/passwords
 		// this is potentially dangerous, i guess? i dunno dude.
+
+		/* 
+		 * brian's note: no, it's not really dangerous. Input should be checked for SQL injection. 
+		 * Output should be checked for XSS. Codeigniter doesn't get this, and their xss_clean() function is shit anyways.
+		 * see http://stackoverflow.com/a/10926392/2178152 and other related discussions
+		 * also http://ponderwell.net/2010/08/codeigniter-xss-protection-is-good-but-not-enough-by-itself/
+		 * we do SQL injection already, and the only place on the website there's output displayed not from the database
+		 * is on the adanced search page. So I added some XSS protection there. Check over there if you want to implement it in more places.
+		 */ 
+
+		
 		$this->form_validation->set_rules('username', 'Username', 'trim|required');
 		$this->form_validation->set_rules('password', 'Password', 'trim|required|callback_check_database');
 		
