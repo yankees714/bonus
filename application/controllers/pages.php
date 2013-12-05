@@ -17,6 +17,8 @@ class Pages extends CI_Controller {
 	public function error()
 	{
 		// meta
+		$data = new stdClass();
+
 		$data->page_title = 'Page not found — The Bowdoin Orient';
 		$data->page_description = '';
 		$data->page_type = '';
@@ -29,6 +31,10 @@ class Pages extends CI_Controller {
 		// check if requested page exists, load if it does
 		if (@file_exists(APPPATH."views/pages/{$page}.php"))
 		{
+			$data = new stdClass();
+			$data->footerdata = new stdClass();
+			$data->headerdata = new stdClass();
+
 			$data->page_title = 'The Bowdoin Orient';			
 			$page_title = array(
 				'about'			=> 'About',
@@ -70,6 +76,8 @@ class Pages extends CI_Controller {
 	
 	public function advsearch()
 	{
+		$data = new stdClass();
+
 		if($this->input->get())
 		{
 			$searchdata = $this->input->get();
@@ -83,6 +91,8 @@ class Pages extends CI_Controller {
 		}
 		
 		$this->load->helper('form');
+		$data->footerdata = new stdClass();
+		$data->headerdata = new stdClass();
 		$data->footerdata->quote = $this->attachments_model->get_random_quote();
 		$data->headerdata->date = date("Y-m-d");
 		
@@ -121,6 +131,8 @@ class Pages extends CI_Controller {
 		else if(time() < strtotime("2013-04-30 00:00:00")) $message = "You wish";
 		else $message = "No";
 				
+		$data = new stdClass();
+		
 		$data->message = $message;
 		$this->load->view('isitivies',$data);
 	}

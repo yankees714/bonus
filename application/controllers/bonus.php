@@ -88,6 +88,8 @@ class Bonus extends CI_Controller {
 			
 			$this->load->helper(array('form'));
 			
+			$data = new stdClass();
+
 			$data->quote = $this->attachments_model->get_random_quote(false);
 			$data->alerts = $this->tools_model->get_alerts(true);
 			$this->load->view('bonus/alerts', $data);
@@ -243,6 +245,7 @@ class Bonus extends CI_Controller {
 			
 			$this->load->helper(array('form'));
 			
+			$data = new stdClass();
 			$data->authors = $this->author_model->get_authors();
 			$data->authors_array = $this->author_model->get_authors_array();
 			$data->quote = $this->attachments_model->get_random_quote(false);

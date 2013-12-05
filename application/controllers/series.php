@@ -31,6 +31,9 @@ class Series extends CI_Controller {
 		
 	public function view($id)
 	{
+		$data = new stdClass;
+		$data->headerdata = new stdClass;
+		$data->footerdata = new stdClass;
 		$series = $this->series_model->get_series($id);
 		
 		if(!$series || $id==0) 
