@@ -128,7 +128,8 @@ class Bonus extends CI_Controller {
 				if (!$this->upload->do_upload('filename')){
 					exit(var_dump($this->upload->display_errors()));
 				} else {
-					$insertdata['filename'] = "ad".($this->ad_model->count_ads()+1).$this->upload->data()['file_ext'];
+					$uploaddata = $this->upload->data();
+					$insertdata['filename'] = "ad".($this->ad_model->count_ads()+1).$uploaddata['file_ext'];
 					$this->ad_model->create_ad($insertdata);
 				}
 			}
