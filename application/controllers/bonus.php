@@ -114,23 +114,21 @@ class Bonus extends CI_Controller {
 					'link'			=> $this->input->post("link"),
 				);
 
-				$fexpl = explode(".", $this->input->post('filename'));
-				die(var_dump($_POST));
-				$extension = $fexpl[count($fexpl)-1];
+				$extension = $this->input->post("extension");
 
 				$config['upload_path'] 		= 'ads/';
 				$config['allowed_types'] 	= 'jpeg|jpg|png';
 				$config['max_size']			= '1000';
 				$config['max_width']  		= '1280';
 				$config['max_height']  		= '1280';
-				$config['file_name'] 		= "ad".($this->ad_model->count_ads()+1).$extension;
+				$config['file_name']		= "ad".($this->ad_model->count_ads()+1);
 
 				$this->load->library('upload', $config);
 
-				if (!$this->upload->do_upload('file')){
+				if (!$this->upload->do_upload('filename')){
 					exit(var_dump($this->upload->display_errors()));
 				} else {
-					$insertdata['filename'] = "ad".($this->ad_model->count_ads()+1).$extension;
+					$insertdata['filename'] = "ad".($this->ad_model->count_ads()+1).$this->upload->data()['file_ext'];
 					$this->ad_model->create_ad($insertdata);
 				}
 			}

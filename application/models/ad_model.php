@@ -16,8 +16,8 @@ class Ad_model extends CI_Model {
     function get_current_ads(){
         $today = date("Y-m-d");
 
-        $this->db->where('DATE_FORMAT(ads.start_date,"%Y-%m-%d") <', $today);
-        $this->db->where('DATE_FORMAT(ads.end_date,"%Y-%m-%d") >', $today);
+        $this->db->where('DATE_FORMAT(ads.start_date,"%Y-%m-%d") <=', $today);
+        $this->db->where('DATE_FORMAT(ads.end_date,"%Y-%m-%d") >=', $today);
 
         $ads = $this->db->get('ads')->result();
 
