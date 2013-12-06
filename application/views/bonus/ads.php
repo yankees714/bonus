@@ -58,13 +58,17 @@
     <tr><td>Start date: </td><td> <input class="datepick" required type="datetime" name="start_date" value="" placeholder="Click to select a date"> </td></tr>
     <tr><td>End date: </td><td> <input class="datepick" required type="datetime" name="end_date" value="" placeholder="Click to select a date"> </td></tr>
     <tr><td>Link when clicked (optional): </td><td> <input type="text" name="link" placeholder="e.g., 'http://flipsidemaine.com'"> </td></tr>
-    <tr><td>Photo upload:</td><td><input required type="file" name="filename" id="filename" accept="image/png, image/jpeg"></td></tr>
+    <tr><td>Photo upload:</td><td><input class="filename" required type="file" name="filename" id="filename" accept="image/png, image/jpeg"></td></tr>
     </table>
+    <input hidden class="extension" type="text" name="extension" value="">
     <?= form_submit('submit',"Create advertisement") ?>
     <?= form_close() ?>
 
     <script type="text/javascript">
         $(".adupload input.datepick").pickadate({format: 'yyyy-mm-dd'});
+        $(".filename").change(function(){
+            $(".extension").val($(".filename").val().split(".")[$(".filename").val().split(".").length-1]);
+        });
     </script>
 
     <h3>Existing Ads</h3>

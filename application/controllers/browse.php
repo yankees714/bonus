@@ -128,7 +128,6 @@ class Browse extends CI_Controller {
 			$data->page_type = '';
 
 			$data->ad = $this->ad_model->get_ad();
-
 			
 			$this->load->view('browse', $data);
 		}
