@@ -9,6 +9,7 @@ class Bonus extends CI_Controller {
 		$this->load->model('attachments_model', '', TRUE);
 		$this->load->model('author_model', '', TRUE);
 		$this->load->model('tools_model', '', TRUE);
+		$this->load->model('ad_model', '', TRUE);
 		$this->load->library('user_agent');
 	}
 	
@@ -39,6 +40,7 @@ class Bonus extends CI_Controller {
 			redirect('browse', 'refresh');
 		}
 		$this->load->helper(array('form'));
+		$data = new stdClass();
 		$data->quote = $this->attachments_model->get_random_quote();
 		
 		if($this->agent->is_referral()) 
@@ -56,6 +58,8 @@ class Bonus extends CI_Controller {
 	{
 		if($this->session->userdata('logged_in'))
 		{
+			$data = new stdClass;
+
 			$data->quote = $this->attachments_model->get_random_quote(false);
 			$data->tips = $this->tools_model->get_tips();
 			$this->load->view('bonus/dashboard', $data);
@@ -84,6 +88,8 @@ class Bonus extends CI_Controller {
 			
 			$this->load->helper(array('form'));
 			
+			$data = new stdClass();
+
 			$data->quote = $this->attachments_model->get_random_quote(false);
 			$data->alerts = $this->tools_model->get_alerts(true);
 			$this->load->view('bonus/alerts', $data);
@@ -95,6 +101,64 @@ class Bonus extends CI_Controller {
 		}
 	}
 	
+
+	function ads() {
+		if($this->session->userdata('logged_in'))
+		{
+			if (!empty($_POST))
+			{
+				$insertdata = array(
+					'sponsor' 		=> $this->input->post("sponsor"),
+					'start_date' 	=> $this->input->post("start_date"),
+					'end_date' 		=> $this->input->post("end_date"),
+					'link'			=> $this->input->post("link"),
+				);
+
+				$extension = $this->input->post("extension");
+
+				$config['upload_path'] 		= 'ads/';
+				$config['allowed_types'] 	= 'jpeg|jpg|png';
+				$config['max_size']			= '1000';
+				$config['max_width']  		= '1280';
+				$config['max_height']  		= '1280';
+				$config['file_name']		= "ad".($this->ad_model->count_ads()+1);
+
+				$this->load->library('upload', $config);
+
+				if (!$this->upload->do_upload('filename')){
+					exit(var_dump($this->upload->display_errors()));
+				} else {
+					$insertdata['filename'] = "ad".($this->ad_model->count_ads()+1).$this->upload->data()['file_ext'];
+					$this->ad_model->create_ad($insertdata);
+				}
+			}
+
+			$this->load->helper(array('form'));
+
+			$data = new stdClass;
+
+			$data->quote = $this->attachments_model->get_random_quote(false);
+			$data->ads = $this->ad_model->get_ads();
+
+			$this->load->view('bonus/ads', $data);
+		}
+		else
+		{
+			//If no session, redirect to login page
+			redirect('bonus/login', 'refresh');
+		}
+	}
+
+	function ajax_delete_ad($ad_id){
+		if(!bonus()) exit("Permission denied. Try refreshing and logging in again.");
+		if($this->input->post('remove')=='true') {
+			$this->ad_model->delete_ad($ad_id);
+			exit("Ad deleted.");
+		}
+		else {
+			exit("Delete request wasn't sent properly.");
+		}
+	}
 
 	function issues()
 	{
@@ -121,7 +185,7 @@ class Bonus extends CI_Controller {
 			}
 
 			$this->load->helper(array('form'));
-
+			$data = new stdClass();
 			$data->quote = $this->attachments_model->get_random_quote(false);
 			$data->issues = $this->tools_model->get_issues();
 
@@ -179,6 +243,7 @@ class Bonus extends CI_Controller {
 			
 			$this->load->helper(array('form'));
 			
+			$data = new stdClass();
 			$data->authors = $this->author_model->get_authors();
 			$data->authors_array = $this->author_model->get_authors_array();
 			$data->quote = $this->attachments_model->get_random_quote(false);

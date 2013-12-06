@@ -9,6 +9,7 @@ class Browse extends CI_Controller {
 		$this->load->model('article_model', '', TRUE);
 		$this->load->model('attachments_model', '', TRUE);
 		$this->load->model('tools_model', '', TRUE);
+		$this->load->model('ad_model', '', TRUE);
 	}
 	
 	public function index()
@@ -80,7 +81,12 @@ class Browse extends CI_Controller {
 			if(count($popular) < 10) {
 				$popular = $this->article_model->get_popular_articles_by_date($last_updated, $last_updated_fivemonths_ago, '10');
 			}
-			
+
+			// php 5.4 STRONGLY objects if you don't do this and E_STRICT is turned on (which it is by default on OSX)
+			$data = new stdClass();
+			$data->headerdata = new stdClass();
+			$data->footerdata = new stdClass();
+
 			// get random quote
 			$data->footerdata->quote = $this->attachments_model->get_random_quote();
 			
@@ -120,6 +126,8 @@ class Browse extends CI_Controller {
 			$data->page_title = '';
 			$data->page_description = '';
 			$data->page_type = '';
+
+			$data->ad = $this->ad_model->get_ad();
 			
 			$this->load->view('browse', $data);
 		}

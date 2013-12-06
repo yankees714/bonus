@@ -30,6 +30,7 @@
     <li><?=anchor('bonus/authors','Authors')?></li>
     <li><?=anchor('bonus/alerts','Alerts')?></li>
     <li><?=anchor('bonus/issues','PDFs')?></li>
+    <li><?=anchor('bonus/ads','Ads')?></li>
     </ul>
     </nav>  
 
