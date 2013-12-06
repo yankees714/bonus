@@ -26,6 +26,10 @@ body {
 	margin:0;
 }
 
+.adupload input {
+	width:200px;
+}
+
 header {
 	padding: 20px;
 }
@@ -250,4 +254,17 @@ nav ul li a:hover {
 
 .bonusbar a {
 	color: darkblue;
+}
+
+/* IMAGES (on ads, issues pages) */
+.ad_thumb {
+	max-height:200px;
+	max-width:300px;
+}
+
+/* FURTHER THINGS BRIAN ADDED WHILE DRUNK */
+.delete-link {
+	cursor:pointer;cursor:hand;
+	font-size:20px;
+	color:red;
 }

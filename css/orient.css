@@ -943,6 +943,12 @@ section h2, #sidebar h2 {
 	height: 142px;
 }
 
+.ad {
+	max-width:100%;
+	background-size:contain;
+	background-repeat:no-repeat;
+}
+
 /* carousel tiles */
 
 .carouseltile {

@@ -30,6 +30,10 @@ class Author extends CI_Controller {
 		
 	public function view($id)
 	{
+		$data = new stdClass;
+		$data->headerdata = new stdClass;
+		$data->footerdata = new stdClass;
+
 		$author = $this->author_model->get_author($id);
 		
 		if(!$author) 
