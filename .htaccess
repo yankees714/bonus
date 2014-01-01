@@ -92,9 +92,3 @@ RewriteRule ^(.*)$ http://bowdoinorient.com [R=301,L]
 # For MVC 
 RewriteCond $1 !^(index\.php|js|css|images|img|ads|files|legacy|robots\.txt|phpinfo\.php)
 RewriteRule ^(.*)$ /index.php/$1 [L]
-
-<Files phpinfo.php>
-       Order Deny,Allow
-       Deny from all
-       Allow from 139.140.0.0/16
-</Files>
