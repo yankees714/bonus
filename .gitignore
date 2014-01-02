@@ -30,6 +30,8 @@ ads/
 *.log
 # *.sql
 *.sqlite
+application/logs/*.php
+
 
 # OS generated files #
 ######################
