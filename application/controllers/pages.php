@@ -61,6 +61,10 @@ class Pages extends CI_Controller {
 	
 	public function search()
 	{
+		$data = new stdClass();
+		$data->footerdata = new stdClass();
+		$data->headerdata = new stdClass();
+
 		$data->query = $this->input->get("q");
 		$data->footerdata->quote = $this->attachments_model->get_random_quote();
 		$data->headerdata->date = date("Y-m-d");
