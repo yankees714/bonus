@@ -17,10 +17,10 @@ date_default_timezone_set('America/New_York');
  *     testing
  *     production
  *
- * NOTE: If you change these, also change the error_reporting() code below
+ * These are set in secret.php.
  *
  */
-	define('ENVIRONMENT', 'development');
+
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING
