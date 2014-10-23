@@ -8,8 +8,8 @@
 .insidesurvey {
     margin:0 auto;
     overflow:hidden;
-    width:740px;
-    height:2150px;
+    width:744px;
+    height:1550px;
 }
 </style
 
@@ -28,7 +28,7 @@
     
     <div class="survey">
         <div class="insidesurvey">
-        <iframe src="https://docs.google.com/forms/d/1ckQbOeTCIL4ZUaxZk0WigqdHXNWT-9k0nrwmsDs1HyY/viewform?embedded=true" width="760" height="2150" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+        <iframe src="https://docs.google.com/forms/d/1lRZCibs7hZssgA2cefzV4_w-jrvwoKMYOfGVo3IJbH0/viewform?embedded=true" width="760" height="2150" frameborder="0" marginheight="0" marginwidth="0" align="middle">Loading...</iframe>
         </div>    
     </div>
 </div>
