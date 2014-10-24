@@ -11,6 +11,17 @@
     width:744px;
     height:1550px;
 }
+
+@media (max-width: 667px) {
+    .insidesurvey {
+        width:330px;
+        height:2000px;
+    }
+    .insidesurvey iframe{
+        width: 350px;
+        height: 100%;
+    }
+}
 </style
 
 <body>
