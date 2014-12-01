@@ -14,7 +14,7 @@
 
 @media (max-width: 667px) {
     .insidesurvey {
-        width:330px;
+        width:400px;
         height:2000px;
         -webkit-overflow-scrolling: touch;
     }
