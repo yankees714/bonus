@@ -14,11 +14,11 @@
 
 @media (max-width: 667px) {
     .insidesurvey {
-        width:330px;
+        width:300px;
         height:2000px;
     }
     .insidesurvey iframe{
-        width: 350px;
+        width: 300px;
         height: 100%;
     }
 }
@@ -39,7 +39,7 @@
     
     <div class="survey">
         <div class="insidesurvey">
-        <iframe src="https://docs.google.com/forms/d/1lRZCibs7hZssgA2cefzV4_w-jrvwoKMYOfGVo3IJbH0/viewform?embedded=true" width="760" height="2150" frameborder="0" marginheight="0" marginwidth="0" align="middle">Loading...</iframe>
+        <iframe src="https://docs.google.com/forms/d/1ePoAStWcgvpjuGQ2JMk77oc6W2D_BXLqgVk83CEQThU/viewform?embedded=true" width="760" height="1500" frameborder="0" marginheight="0" marginwidth="0" align="middle">Loading...</iframe>
         </div>    
     </div>
 </div>
