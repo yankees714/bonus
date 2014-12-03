@@ -9,7 +9,7 @@
     margin:0 auto;
     overflow:hidden;
     width:744px;
-    height:1550px;
+    height:2500px;
 }
 
 @media (max-width: 667px) {
@@ -40,7 +40,7 @@
     
     <div class="survey">
         <div class="insidesurvey">
-        <iframe src="https://docs.google.com/forms/d/1ePoAStWcgvpjuGQ2JMk77oc6W2D_BXLqgVk83CEQThU/viewform?embedded=true" width="760" height="1500" frameborder="0" marginheight="0" marginwidth="0" align="middle">Loading...</iframe>
+        <iframe src="https://docs.google.com/forms/d/1ePoAStWcgvpjuGQ2JMk77oc6W2D_BXLqgVk83CEQThU/viewform?embedded=true" width="760" height="2500" frameborder="0" marginheight="0" marginwidth="0" align="middle">Loading...</iframe>
         </div>    
     </div>
 </div>
