@@ -58,7 +58,7 @@ class Browse extends CI_Controller {
                 $scribd_thumb_url = false;
                 if($issue->scribd) {
                     $ch = curl_init();    
-                    curl_setopt($ch, CURLOPT_URL, "http://api.scribd.com/api?method=thumbnail.get&api_key=".$config['scribd_api_key']."&doc_id=".$issue->scribd);
+                    curl_setopt($ch, CURLOPT_URL, "http://api.scribd.com/api?method=thumbnail.get&api_key=".getenv('SCRIBD_API_KEY')."&doc_id=".$issue->scribd);
                     curl_setopt($ch, CURLOPT_HEADER, 0);
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
                     curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 3); 
