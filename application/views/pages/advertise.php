@@ -208,7 +208,7 @@
                                 <td>Thanksgiving Break</td>
                             </tr>
                             <tr>
-                                <td>12</td>
+                                <td>11</td>
                                 <td>December 5</td>
                                 <td></td>
                             </tr>
@@ -221,80 +221,80 @@
                                 <td colspan="3">Spring 2015</td>
                             </tr>
                         </thead>
-                        <tbody style="display:none">
+                        <tbody>
+                            <tr>
+                                <td>12</td>
+                                <td>January 23</td>
+                                <td></td>
+                            </tr>
                             <tr>
                                 <td>13</td>
-                                <td>January 24</td>
+                                <td>January 30</td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td>14</td>
-                                <td>January 31</td>
+                                <td>February 6</td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td>15</td>
-                                <td>February 7</td>
+                                <td>February 13</td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td>16</td>
-                                <td>February 14</td>
+                                <td>February 20</td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td>17</td>
-                                <td>February 21</td>
+                                <td>February 27</td>
                                 <td></td>
+                            </tr>
+                            <tr class="invalid">
+                                <td></td>
+                                <td>March 6</td>
+                                <td>Spring Break</td>
+                            </tr>
+                            <tr class="invalid">
+                                <td></td>
+                                <td>March 13</td>
+                                <td>Spring Break</td>
+                            </tr>
+                            <tr class="invalid">
+                                <td></td>
+                                <td>March 20</td>
+                                <td>Spring Break</td>
                             </tr>
                             <tr>
                                 <td>18</td>
-                                <td>February 28</td>
+                                <td>March 27</td>
                                 <td></td>
-                            </tr>
-                            <tr class="invalid">
-                                <td></td>
-                                <td>March 7</td>
-                                <td>Spring Break</td>
-                            </tr>
-                            <tr class="invalid">
-                                <td></td>
-                                <td>March 14</td>
-                                <td>Spring Break</td>
-                            </tr>
-                            <tr class="invalid">
-                                <td></td>
-                                <td>March 21</td>
-                                <td>Spring Break</td>
                             </tr>
                             <tr>
                                 <td>19</td>
-                                <td>March 28</td>
+                                <td>April 3</td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td>20</td>
-                                <td>April 4</td>
+                                <td>April 10</td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td>21</td>
-                                <td>April 11</td>
+                                <td>April 17</td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td>22</td>
-                                <td>April 18</td>
+                                <td>April 24</td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td>23</td>
-                                <td>April 25</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>24</td>
-                                <td>May 2</td>
+                                <td>May 1</td>
                                 <td></td>
                             </tr>
                         </tbody>
