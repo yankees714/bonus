@@ -1033,8 +1033,7 @@ figure.authorpic img {
 figure {
   width: 500px;
   float: right;
-  margin: 0 0 25px 25px;
-  clear: both; }
+  margin: 0 0 25px 25px; }
   figure ul, figure li {
     list-style: none;
     margin: 0;
