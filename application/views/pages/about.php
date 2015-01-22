@@ -34,6 +34,7 @@
             <ul>
                 <li><?=anchor('pages/ethics','Ethical Practices Policy')?></li>
                 <li><?=anchor('pages/nonremoval', 'Web Non-Removal Policy')?></li>
+                <li><?=anchor('pages/comments', 'Comment Policy')?></li>
             </ul>
         </figure>
         

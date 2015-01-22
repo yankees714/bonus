@@ -19,6 +19,7 @@
             <ul>
                 <li><?=anchor('about','About the Orient')?></li>
                 <li><?=anchor('pages/ethics', 'Ethical Practices Policy')?></li>
+                <li><?=anchor('pages/comments', 'Comment Policy')?></li>
             </ul>
         </figure>
         
