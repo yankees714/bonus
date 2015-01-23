@@ -32,9 +32,9 @@
         <figure id="contents">
             <h3>Related links</h3>
             <ul>
-                <li><?=anchor('pages/ethics','Ethical Practices Policy')?></li>
-                <li><?=anchor('pages/nonremoval', 'Web Non-Removal Policy')?></li>
-                <li><?=anchor('pages/comments', 'Comment Policy')?></li>
+                <li><?=anchor('ethics','Ethical Practices Policy')?></li>
+                <li><?=anchor('nonremoval', 'Web Non-Removal Policy')?></li>
+                <li><?=anchor('comments', 'Comment Policy')?></li>
             </ul>
         </figure>
         

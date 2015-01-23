@@ -18,8 +18,8 @@
             <h3>Related links</h3>
             <ul>
                 <li><?=anchor('about','About the Orient')?></li>
-                <li><?=anchor('pages/ethics', 'Ethical Practices Policy')?></li>
-                <li><?=anchor('pages/comments', 'Comment Policy')?></li>
+                <li><?=anchor('ethics', 'Ethical Practices Policy')?></li>
+                <li><?=anchor('comments', 'Comment Policy')?></li>
             </ul>
         </figure>
         

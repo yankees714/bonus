@@ -18,8 +18,8 @@
             <h3>Related links</h3>
             <ul>
                 <li><?=anchor('about','About the Orient')?></li>
-                <li><?=anchor('pages/nonremoval', 'Web Non-Removal Policy')?></li>
-                <li><?=anchor('pages/comments', 'Comment Policy')?></li>
+                <li><?=anchor('nonremoval', 'Web Non-Removal Policy')?></li>
+                <li><?=anchor('comments', 'Comment Policy')?></li>
             </ul>
         </figure>
         
