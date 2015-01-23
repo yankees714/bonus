@@ -44,7 +44,8 @@ class Pages extends CI_Controller {
                 'ethics'         => 'Ethics',
                 'nonremoval'    => 'Web Non-Removal Policy',
                 'subscribe'        => 'Subscribe',
-                'survey'        => 'Survey'
+                'survey'        => 'Survey',
+                'comments'        => 'Comment Policy'
                 );
             if(isset($page_title[$page])) $data->page_title = $page_title[$page].' — The Bowdoin Orient';
             
