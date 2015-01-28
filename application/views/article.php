@@ -273,7 +273,7 @@ $this->load->view('template/head', $headdata); ?>
                 <br>
                 <p>
                 <h2>Comments</h2>
-                Before submitting a comment, please review our <?=anchor('pages/comments', 'comment policy')?>.
+                Before submitting a comment, please review our <?=anchor('comments', 'comment policy')?>.
                 </p>
                 <? if(!bonus()): ?>
                     <!-- Disqus -->
