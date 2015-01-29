@@ -7,6 +7,7 @@ class Pages extends CI_Controller {
         parent::__construct();
         date_default_timezone_set('America/New_York');
         $this->load->model('attachments_model', '', TRUE);
+        $this->load->model('pages_model', '', TRUE);
     }
     
     public function index()
@@ -50,6 +51,12 @@ class Pages extends CI_Controller {
             if(isset($page_title[$page])) $data->page_title = $page_title[$page].' — The Bowdoin Orient';
             
             $data->page = $page;
+
+            // Hard coding this to pass along the comment policy, but eventually
+            // we should be able to get the content for any page from the pages
+            // model
+            $data->content = $this->pages_model->get_content();
+
             $data->footerdata->quote = $this->attachments_model->get_random_quote();
             $data->headerdata->date = date("Y-m-d");
             $this->load->view('pages/'.$page, $data);
