@@ -45,87 +45,8 @@
             <p>The paper has an on-campus distribution of over 2,000, and is mailed off-campus to several hundred subscribers. It is distributed free-of-charge at various locations on campus, including the student union, several classroom buildings, the admissions office, the dining halls, and the libraries. Published on Fridays, 24 times a year, the Orient is read by students and their families, faculty, staff, alumni, off-campus subscribers, prospective students, and campus visitors.</p>
                         
             <h3>Staff</h3>
-            <div id="stafftable">
-
-                <div id="topstaff">
-                    <!--<div id="eic">
-                        <div style="width:100%"><p><span class="bigshot">Linda Kinstler,</span> <span class="bigshot-title">Editor in Chief</span></p></div>
-                    </div> -->
-                    <div id="topeditors">
-                        <div style="width:50%"><p><span class="bigshot">Garrett Casey</span><br/> <span class="bigshot-title">Editor in Chief</span></p></div>
-                        <div style="width:50%"><p><span class="bigshot">Kate Witteman</span><br/> <span class="bigshot-title">Editor in Chief</span></p></div>
-                        <div style="width:50%"><p><span class="bigshot">Ron Cervantes</span><br/> <span class="bigshot-title">Managing Editor</span></p></div>
-                        <div style="width:50%"><p><span class="bigshot">Sam Miller</span><br/> <span class="bigshot-title">Managing Editor</span></p></div>
-                        <div style="width:50%"><p><span class="bigshot">Leo Shaw</span><br/> <span class="bigshot-title">Managing Editor</span></p></div>
-                        <div style="width:50%"><p><span class="bigshot">Natalie Kass-Kaufman</span><br/> <span class="bigshot-title">Managing Editor</span></p></div>
-                    </div>
-                </div>
-                <hr style="width:50%; margin: 0 auto;">
-                <div id="lowerstaff">
-                    <div class="column">
-                        <p class="stafftitle">News Editor</p>
-                        <p>Meg Robbins</p>
-                        
-                        <p class="stafftitle">Features Editor</p>
-                        <p>Julian Andrews</p>
-                        
-                        <p class="stafftitle">A&amp;E Editor</p>
-                        <p>Emily Weyrauch</p>
-                        
-                        <p class="stafftitle">Sports Editor</p>
-                        <p>Jono Gruber</p>
-                        
-                        <p class="stafftitle">Opinion Editor</p>
-                        <p>Joe Seibert</p>
-                        
-                        <p class="stafftitle">Senior News Reporters</p>
-                        <p>Cameron de Wet</p>
-                        <p>Joe Sherlock</p>
-                    </div>
-                    <div class="column">
-                        <p class="stafftitle">Associate Editors</p>
-                        <p>Connor Evans</p>
-                        <p>Elana Vlodaver</p>
-
-                        <p class="stafftitle">Business Managers</p>
-                        <p>Ali Considine</p>
-                        <p>Rachel Zheng</p>
-
-                        <p class="stafftitle">Copy Editors</p>
-                        <p>Katie Miklus</p>
-                        <p>Caitlin Whalen</p>
-
-                        <p class="stafftitle">Editors-at-Large</p>
-                        <p>Sam Chase</p>
-                        <p>Matthew Gutschenritter</p>
-                        <p>Hy Khong</p>
-                        <p>Emma Peters</p>
-                        <p>Nicole Wetsman</p>
-                        
-                    </div>
-                    <div class="column">
-                        <p class="stafftitle">Photo Editors</p>
-                        <p>Kate Featherston</p>
-                        <p>Eliza Graumlich</p>
-
-                        <p class="stafftitle">Web Developer</p>
-                        <p>Andrew Daniels</p>
-
-                        <p class="stafftitle">Web Editor</p>
-                        <p>Grace Handler</p>
-
-                        <p class="stafftitle">Page Two Editor</p>
-                        <p>Olivia Atwood</p>
-
-                        <p class="stafftitle">Graphic Designer</p>
-                        <p>Alex Mayer</p>   
-
-                        <p class="stafftitle">Illustrator</p>
-                        <p>Anna Hall</p>                    
-                    </div>
-                </div>
-                
-            </div>
+            <?//Pulling in the masthead?>
+            <?=$content?>
             
             <div style="clear:both;"></div>
             

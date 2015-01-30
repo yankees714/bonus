@@ -52,10 +52,9 @@ class Pages extends CI_Controller {
             
             $data->page = $page;
 
-            // Hard coding this to pass along the comment policy, but eventually
-            // we should be able to get the content for any page from the pages
-            // model
-            $data->content = $this->pages_model->get_content();
+            // Basically using content as a catch all for anything I want to
+            // pass to a specific page
+            $data->content = $this->pages_model->get_content($page);
 
             $data->footerdata->quote = $this->attachments_model->get_random_quote();
             $data->headerdata->date = date("Y-m-d");

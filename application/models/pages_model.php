@@ -7,12 +7,16 @@ class Pages_model extends CI_Model {
         parent::__construct();
     }
     
-    function get_content(){
-        $this->db->where('page', "comments"); 
+    function get_content($page){
+        $this->db->where('page', $page); 
         $query = $this->db->get("pages");
         $row = $query->row();
 
-        return $row->content;
+        if($row){
+            return $row->content;
+        } else {
+            return "";
+        }
     }
 }
 ?>
