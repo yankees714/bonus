@@ -270,6 +270,11 @@ $this->load->view('template/head', $headdata); ?>
 
             </div>
             <div id="articlefooter">
+                <br>
+                <p>
+                <h2>Comments</h2>
+                Before submitting a comment, please review our <?=anchor('comments', 'comment policy')?>.
+                </p>
                 <? if(!bonus()): ?>
                     <!-- Disqus -->
                     <div id="disqus_thread"></div>
