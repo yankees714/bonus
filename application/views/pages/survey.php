@@ -8,11 +8,11 @@
 .insidesurvey {
     margin:0 auto;
     overflow:hidden;
-    width:744px;
+    /*width:744px;*/
     /*height:2500px;*/
 }
 
-<!-- @media (max-width: 667px) {
+ /*@media (max-width: 667px) {
     .insidesurvey {
         width:500px;
         height:2800px;
@@ -21,9 +21,9 @@
     .insidesurvey iframe{
         width: 300px;
         height: 100%;
-    }
+    }*/
 }
-</style> -->
+</style>
 
 <body>
 
