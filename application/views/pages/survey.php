@@ -2,26 +2,20 @@
 
 <style>
 .survey {
-   position:relative;
-   display:block;
-}
-.insidesurvey {
-    margin:0 auto;
-    overflow:hidden;
-    /*width:744px;*/
-    /*height:2500px;*/
+    position: relative;
+    padding-bottom: 120%;
+    height: 0;
+    overflow: hidden;
 }
 
- @media (max-width: 667px) {
-    .insidesurvey {
-        /*width:500px;*/
-        /*height:2800px;*/
-        -webkit-overflow-scrolling: touch;
-    }
-    .insidesurvey iframe{
-        /*width: 300px;*/
-        /*height: 100%;*/
-    }
+.survey iframe{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 }
 </style>
 
@@ -39,14 +33,12 @@
     -->
     
     <div class="survey">
-        <div class="insidesurvey">
-        <iframe id="survey" src="https://docs.google.com/forms/d/1LaKxhjXkybhjv3F6dqk0LYE18HxVSscOxhpDTHIqzeU/viewform?embedded=true" height="500" width="100%" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-        </div>    
+        <iframe id="survey" src="https://docs.google.com/forms/d/1LaKxhjXkybhjv3F6dqk0LYE18HxVSscOxhpDTHIqzeU/viewform?embedded=true" height="500" width="760" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
     </div>
     <script>
         /* Set the iframe to a reasonable height so that most of the scrolling 
             is in the frame*/
-        document.getElementById("survey").height = window.screen.height - 47 - 63- 45;
+        // document.getElementById("survey").height = window.screen.height - 47 - 63- 45;
     </script>
 </div>
 
