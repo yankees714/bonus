@@ -12,16 +12,16 @@
     /*height:2500px;*/
 }
 
- /*@media (max-width: 667px) {
+ @media (max-width: 667px) {
     .insidesurvey {
-        width:500px;
-        height:2800px;
+        /*width:500px;*/
+        /*height:2800px;*/
         -webkit-overflow-scrolling: touch;
     }
     .insidesurvey iframe{
-        width: 300px;
-        height: 100%;
-    }*/
+        /*width: 300px;*/
+        /*height: 100%;*/
+    }
 }
 </style>
 
