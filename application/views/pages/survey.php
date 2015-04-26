@@ -9,7 +9,7 @@
     margin:0 auto;
     overflow:hidden;
     width:744px;
-    height:2500px;
+    /*height:2500px;*/
 }
 
 @media (max-width: 667px) {
@@ -40,9 +40,14 @@
     
     <div class="survey">
         <div class="insidesurvey">
-        <iframe src="https://docs.google.com/forms/d/1ePoAStWcgvpjuGQ2JMk77oc6W2D_BXLqgVk83CEQThU/viewform?embedded=true" width="760" height="2500" frameborder="0" marginheight="0" marginwidth="0" align="middle">Loading...</iframe>
+        <iframe id="survey" src="https://docs.google.com/forms/d/1LaKxhjXkybhjv3F6dqk0LYE18HxVSscOxhpDTHIqzeU/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
         </div>    
     </div>
+    <script>
+        /* Set the iframe to a reasonable height so that most of the scrolling 
+            is in the frame*/
+        document.getElementById("survey").height = window.screen.height - 47 - 63- 45;
+    </script>
 </div>
 
 <? $this->load->view('template/bodyfooter', $footerdata); ?>
