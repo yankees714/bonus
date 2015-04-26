@@ -12,7 +12,7 @@
     /*height:2500px;*/
 }
 
-@media (max-width: 667px) {
+<!-- @media (max-width: 667px) {
     .insidesurvey {
         width:500px;
         height:2800px;
@@ -23,7 +23,7 @@
         height: 100%;
     }
 }
-</style
+</style> -->
 
 <body>
 
@@ -40,7 +40,7 @@
     
     <div class="survey">
         <div class="insidesurvey">
-        <iframe id="survey" src="https://docs.google.com/forms/d/1LaKxhjXkybhjv3F6dqk0LYE18HxVSscOxhpDTHIqzeU/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+        <iframe id="survey" src="https://docs.google.com/forms/d/1LaKxhjXkybhjv3F6dqk0LYE18HxVSscOxhpDTHIqzeU/viewform?embedded=true" height="500" width="100%" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
         </div>    
     </div>
     <script>
