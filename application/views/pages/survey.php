@@ -19,11 +19,11 @@
 }
 
 
-@media (max-device-width: 736px) {
+/*@media (max-device-width: 736px) {
     .survey{
         width:300px;
     }
-}
+}*/
 </style>
 
 <body>
