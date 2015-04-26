@@ -7,6 +7,7 @@
     height: 0;
     /*overflow: hidden;*/
     overflow: scroll;
+    -webkit-overflow-scrolling:touch;
 }
 
 .survey iframe{
@@ -17,6 +18,11 @@
     height: 100%;
 }
 
+
+@media (max-device-width: 736px) {
+    .survey{
+        width:300px;
+    }
 }
 </style>
 
