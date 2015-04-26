@@ -5,7 +5,8 @@
     position: relative;
     padding-bottom: 120%;
     height: 0;
-    overflow: hidden;
+    /*overflow: hidden;*/
+    overflow: scroll;
 }
 
 .survey iframe{
