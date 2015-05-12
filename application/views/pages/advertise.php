@@ -30,15 +30,15 @@
         
         <div id="pagescontentbody" class="pagescontentbody">
             
-            <p><em>The Bowdoin Orient</em> is the student newspaper of Bowdoin College, located in Brunswick, Maine. <em>The Orient</em> has an average circulation of 2300 copies per issue and reaches people of all ages locally, nationally, and internationally. All of the readers are connected to Bowdoin College in one way or another and most will at some point be in the area to use the community's resources—hotels, restaurants, and stores. Your decision to advertise with <em>The Orient</em> will without a doubt help broaden your customer base and open doors for your business in the immediate and distant future.</p>
+            <p><em>The Bowdoin Orient</em> is the student newspaper of Bowdoin College, located in Brunswick, Maine. <em>The Orient</em> has an average circulation of 1800 copies per issue and reaches people of all ages locally, nationally, and internationally. All of the readers are connected to Bowdoin College in one way or another and most will at some point be in the area to use the community's resources—hotels, restaurants, and stores. Your decision to advertise with <em>The Orient</em> will without a doubt help broaden your customer base and open doors for your business in the immediate and distant future.</p>
     
             <h3 style="clear:none;">Advertising Rates</h3>
     
                 <ul>
                     <li><strong>Publication Frequency:</strong> Every Friday while classes are in session (see below for production schedule).</li>
-                    <li><strong>Average Circulation:</strong> 2300 copies, read by on-campus by students, faculty, staff, and local residents, and off-campus by parents, alumni, and friends of the College.</li>
+                    <li><strong>Average Circulation:</strong> 1800 copies, read by on-campus by students, faculty, staff, and local residents, and off-campus by parents, alumni, and friends of the College.</li>
                     <li><strong>Columns:</strong> Five columns, each 1.84 inches wide with a 0.25 inch margin between each column.</li>
-                    <li><strong>Deadlines:</strong> All ads should be received by 5:00 p.m. on the Monday of the week they are to run.</li>
+                    <li><strong>Deadlines:</strong> All ads should be received by 5:00 p.m. on the Wednesday of the week they are to run.</li>
                     <li><strong>Submission:</strong> We prefer ads submitted digitally via email (as a .tif or .pdf file, for example), but we also accept ads at our above mailing address.</li>
                     <li><strong>Pre-payment Discount:</strong> We offer a 5% discount for pre-payment.</li>
                     <li><strong>Frequency Discount:</strong> We offer a discount of 50% on every fifth ad.</li>
@@ -114,7 +114,7 @@
                 Email: <a href="mailto: abarnard@mymediamate.com">abarnard@mymediamate.com</a>
             </p>
             
-            <h3>Production Schedule <em>(2014–2015)</em></h3>
+            <h3>Production Schedule <em>(2015-2016)</em></h3>
                 <p>Dates in gray are non-publication dates.</p>
                 
                 <style>
@@ -145,71 +145,81 @@
                     <table>
                         <thead>
                             <tr>
-                                <td colspan="3">Fall 2014</td>
+                                <td colspan="3">Fall 2015</td>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>September 12</td>
+                                <td>August 30</td>
+                                <td>Orientation</td>
                             </tr>
                             <tr>
                                 <td>2</td>
-                                <td>September 19</td>
-                                <td></td>
+                                <td>September 11</td>
                             </tr>
                             <tr>
                                 <td>3</td>
-                                <td>September 26</td>
+                                <td>September 18</td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td>4</td>
-                                <td>October 3</td>
+                                <td>September 25</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>October 2</td>
                             </tr>
                             </tr>
                             <tr class="invalid">
                                 <td></td>
-                                <td>October 10</td>
+                                <td>October 9</td>
                                 <td>Fall Break</td>
                             </tr>
                             <tr>
-                                <td>5</td>
-                                <td>October 17</td>
+                                <td>6</td>
+                                <td>October 16</td>
                                 <td>Homecoming</td>
                             <tr>
-                                <td>6</td>
-                                <td>October 24</td>
-                                <td></td>
-                            </tr>
-                            <tr>
                                 <td>7</td>
-                                <td>October 31</td>
-                                <td>Family Weekend</td>
+                                <td>October 23</td>
+                                <td></td>
                             </tr>
                             <tr>
                                 <td>8</td>
-                                <td>November 7</td>
-                                <td></td>
+                                <td>October 30</td>
+                                <td>Family Weekend</td>
                             </tr>
                             <tr>
                                 <td>9</td>
-                                <td>November 14</td>
+                                <td>November 6</td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td>10</td>
-                                <td>November 21</td>
+                                <td>November 13</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>November 20</td>
                                 <td></td>
                             </tr>
                             <tr class="invalid">
                                 <td></td>
-                                <td>November 28</td>
+                                <td>November 27</td>
                                 <td>Thanksgiving Break</td>
                             </tr>
                             <tr>
-                                <td>11</td>
-                                <td>December 5</td>
+                                <td>12</td>
+                                <td>December 4</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>December 11</td>
                                 <td></td>
                             </tr>
                         </tbody>
@@ -218,83 +228,78 @@
                     <table>
                         <thead>
                             <tr>
-                                <td colspan="3">Spring 2015</td>
+                                <td colspan="3">Spring 2016</td>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>12</td>
-                                <td>January 23</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>13</td>
-                                <td>January 30</td>
-                                <td></td>
-                            </tr>
-                            <tr>
                                 <td>14</td>
-                                <td>February 6</td>
+                                <td>January 29</td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td>15</td>
-                                <td>February 13</td>
+                                <td>February 5</td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td>16</td>
-                                <td>February 20</td>
+                                <td>February 12</td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td>17</td>
-                                <td>February 27</td>
+                                <td>February 19</td>
                                 <td></td>
-                            </tr>
-                            <tr class="invalid">
-                                <td></td>
-                                <td>March 6</td>
-                                <td>Spring Break</td>
-                            </tr>
-                            <tr class="invalid">
-                                <td></td>
-                                <td>March 13</td>
-                                <td>Spring Break</td>
-                            </tr>
-                            <tr class="invalid">
-                                <td></td>
-                                <td>March 20</td>
-                                <td>Spring Break</td>
                             </tr>
                             <tr>
                                 <td>18</td>
-                                <td>March 27</td>
+                                <td>February 26</td>
                                 <td></td>
+                            </tr>
+                            <tr class="invalid">
+                                <td></td>
+                                <td>March 11</td>
+                                <td>Spring Break</td>
+                            </tr>
+                            <tr class="invalid">
+                                <td></td>
+                                <td>March 18</td>
+                                <td>Spring Break</td>
+                            </tr>
+                            <tr class="invalid">
+                                <td></td>
+                                <td>March 25</td>
+                                <td>Spring Break</td>
                             </tr>
                             <tr>
                                 <td>19</td>
-                                <td>April 3</td>
+                                <td>April 1</td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td>20</td>
-                                <td>April 10</td>
+                                <td>April 8</td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td>21</td>
-                                <td>April 17</td>
+                                <td>April 15</td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td>22</td>
-                                <td>April 24</td>
+                                <td>April 22</td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td>23</td>
-                                <td>May 1</td>
+                                <td>April 29</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>24</td>
+                                <td>May 6</td>
                                 <td></td>
                             </tr>
                         </tbody>
