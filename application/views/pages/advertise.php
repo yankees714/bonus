@@ -24,7 +24,7 @@
                     <div class="street-address">6200 College Station</div>
                     <div class="locality">Brunswick</span>, <span class="region">Maine</span> <span class="postal-code">04011</div>
                 </div>
-                <div class="staff"><span class="position">Business Managers:</span> <br>Rachel Zheng &amp; Alison Considine</div>
+                <div class="staff"><span class="position">Business Managers:</span> <br>Rachel Zheng &amp; Evan Bulman</div>
             </div>
         </div>
         
@@ -98,7 +98,7 @@
             </table>
 
             <p>For further information involving local ads, please contact our business managers. <br>
-                <strong>Rachel Zheng &amp; Alison Considine</strong> <br>
+                <strong>Rachel Zheng &amp; Evan Bulman</strong> <br>
                 <em>Bowdoin Orient Business Managers</em> <br>
                 Phone: (207) 725-3053<br>
                 Email: <a href="mailto: orientads@gmail.com">orientads@gmail.com</a>
@@ -107,11 +107,11 @@
             <h3 style="clear:none;">National/Regional Advertisers</h3>
 
             <p>For further information involving national or regional ads, please contact our MediaMate representative. <br>
-                <strong>Allison Barnard</strong> <br>
+                <strong>Lindsay Lafortune</strong> <br>
                 <em>MediaMate, LLC.</em> <br>
                 <em>Account Manager</em> <br>
-                Phone: (1-800) 897-7711 ext 121<br>
-                Email: <a href="mailto: abarnard@mymediamate.com">abarnard@mymediamate.com</a>
+                Phone: 888.897.7711 ext 122<br>
+                Email: <a href="mailto: Llafortune@mymediamate.com">Llafortune@mymediamate.com</a>
             </p>
             
             <h3>Production Schedule <em>(2015-2016)</em></h3>
@@ -150,26 +150,26 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>1</td>
+                                <td>0</td>
                                 <td>August 30</td>
                                 <td>Orientation</td>
                             </tr>
                             <tr>
-                                <td>2</td>
+                                <td>1</td>
                                 <td>September 11</td>
                             </tr>
                             <tr>
-                                <td>3</td>
+                                <td>2</td>
                                 <td>September 18</td>
                                 <td></td>
                             </tr>
                             <tr>
-                                <td>4</td>
+                                <td>3</td>
                                 <td>September 25</td>
                                 <td></td>
                             </tr>
                             <tr>
-                                <td>5</td>
+                                <td>4</td>
                                 <td>October 2</td>
                             </tr>
                             </tr>
@@ -179,31 +179,31 @@
                                 <td>Fall Break</td>
                             </tr>
                             <tr>
-                                <td>6</td>
+                                <td>5</td>
                                 <td>October 16</td>
                                 <td>Homecoming</td>
                             <tr>
-                                <td>7</td>
+                                <td>6</td>
                                 <td>October 23</td>
                                 <td></td>
                             </tr>
                             <tr>
-                                <td>8</td>
+                                <td>7</td>
                                 <td>October 30</td>
                                 <td>Family Weekend</td>
                             </tr>
                             <tr>
-                                <td>9</td>
+                                <td>8</td>
                                 <td>November 6</td>
                                 <td></td>
                             </tr>
                             <tr>
-                                <td>10</td>
+                                <td>9</td>
                                 <td>November 13</td>
                                 <td></td>
                             </tr>
                             <tr>
-                                <td>11</td>
+                                <td>10</td>
                                 <td>November 20</td>
                                 <td></td>
                             </tr>
@@ -213,12 +213,12 @@
                                 <td>Thanksgiving Break</td>
                             </tr>
                             <tr>
-                                <td>12</td>
+                                <td>11</td>
                                 <td>December 4</td>
                                 <td></td>
                             </tr>
                             <tr>
-                                <td>13</td>
+                                <td>12</td>
                                 <td>December 11</td>
                                 <td></td>
                             </tr>
@@ -233,28 +233,33 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>14</td>
+                                <td>13</td>
                                 <td>January 29</td>
                                 <td></td>
                             </tr>
                             <tr>
-                                <td>15</td>
+                                <td>14</td>
                                 <td>February 5</td>
                                 <td></td>
                             </tr>
                             <tr>
-                                <td>16</td>
+                                <td>15</td>
                                 <td>February 12</td>
                                 <td></td>
                             </tr>
                             <tr>
-                                <td>17</td>
+                                <td>16</td>
                                 <td>February 19</td>
                                 <td></td>
                             </tr>
                             <tr>
-                                <td>18</td>
+                                <td>17</td>
                                 <td>February 26</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>18</td>
+                                <td>March 4</td>
                                 <td></td>
                             </tr>
                             <tr class="invalid">
